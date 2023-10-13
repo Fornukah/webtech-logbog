@@ -1,11 +1,27 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(204, 255, 204);
 }
 
 /* overskrift h1 design */
 h1{
 font-style: bold;
 font-size: 70px;
+font: sans-serif;
+float: middle;
+}
+
+h2{
+font-style: bold;
+font-size: 50px;
+font: sans-serif;
+float: middle;   
+}
+
+p{
+font-style: normal;
+font-size: 30px;
+font: sans-serif; 
+float: middle;
 }
 
 pre{
