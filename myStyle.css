@@ -5,21 +5,21 @@ body {
 /* overskrift h1 design */
 h1{
 font-style: bold;
-font-size: 70px;
+font-size: 40px;
 font: sans-serif;
 text-align: center;
 }
 
 h2{
 font-style: bold;
-font-size: 50px;
+font-size: 30px;
 font: sans-serif;
 text-align: center;   
 }
 
 p{
 font-style: normal;
-font-size: 30px;
+font-size: 10px;
 font: sans-serif; 
 text-align: left;
 }
