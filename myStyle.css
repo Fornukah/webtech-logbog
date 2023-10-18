@@ -8,13 +8,17 @@ font-style: bold;
 font-size: 40px;
 font: sans-serif;
 text-align: center;
+border: 20px solid powderblue;
+padding: 30px;
 }
 
 h2{
 font-style: bold;
 font-size: 30px;
 font: sans-serif;
-text-align: center;   
+text-align: center; 
+border: 10px solid powderblue;
+padding: 30px;
 }
 
 p{
