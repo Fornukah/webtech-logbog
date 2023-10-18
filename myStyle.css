@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(153, 255, 204);
+  background-color: rgb(154, 182, 182);
 }
 
 /* overskrift h1 design */
@@ -8,7 +8,7 @@ font-style: bold;
 font-size: 40px;
 font: sans-serif;
 text-align: center;
-border: 20px solid powderblue;
+border: 20px solid rgb(204, 51, 0);
 padding: 30px;
 }
 
@@ -17,13 +17,13 @@ font-style: bold;
 font-size: 30px;
 font: sans-serif;
 text-align: center; 
-border: 10px solid powderblue;
+border: 10px solid rgb(204, 51, 0);
 padding: 30px;
 }
 
 p{
 font-style: normal;
-font-size: 10px;
+font-size: 20px;
 font: sans-serif; 
 text-align: left;
 }
@@ -31,7 +31,6 @@ text-align: left;
 pre{
   background-color: red;
 }
-
 
 .boxFloatMiddle{
 float: middle;
