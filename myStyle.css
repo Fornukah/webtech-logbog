@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(154, 182, 182);
+  background-color: rgb(154, 182, 182, 71);
 }
 
 /* overskrift h1 design */
@@ -8,7 +8,7 @@ font-style: bold;
 font-size: 40px;
 font: sans-serif;
 text-align: center;
-border: 20px solid rgb(204, 51, 0);
+border: 20px solid rgb(168, 32, 245, 96);
 padding: 30px;
 }
 
@@ -17,7 +17,7 @@ font-style: bold;
 font-size: 30px;
 font: sans-serif;
 text-align: center; 
-border: 10px solid rgb(204, 51, 0);
+border: 10px solid rgb(98, 32, 245, 96);
 padding: 30px;
 }
 
