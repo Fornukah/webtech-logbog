@@ -8,8 +8,8 @@ font-style: bold;
 font-size: 40px;
 font-family: "Lucida Console", "Courier New", monospace;
 text-align: center;
-border: 20px solid rgb(132, 151, 245 , 96);
-padding: 30px;
+border: 15px solid rgb(132, 151, 245 , 96);
+padding: 20px;
 }
 
 h2{
@@ -17,7 +17,7 @@ font-style: bold;
 font-size: 30px;
 font-family: "Lucida Console", "Courier New", monospace;
 text-align: center; 
-border: 10px solid rgb(132, 152, 131, 96);
+border: 10px solid rgb(132, 187, 245, 96);
 padding: 30px;
 }
 
@@ -26,6 +26,24 @@ font-style: normal;
 font-size: 20px;
  font-family: Arial, Helvetica, sans-serif; 
 text-align: left;
+}
+
+a{
+font-style: normal;
+font-size: 20px;
+ font-family: Arial, Helvetica, sans-serif; 
+text-align: left;
+text-decoration: none; /* fjerner understregen på link*/
+color: rgb(0, 0, 0);
+}
+
+a:hover {
+font-style: normal;
+font-size: 20px;
+ font-family: Arial, Helvetica, sans-serif; 
+text-align: left;
+text-decoration: none; /* fjerner understregen på link*/
+color: rgb(100, 100, 100);
 }
 
 pre{
@@ -46,4 +64,40 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+.card{
+  float: left;
+  width: 100%;
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden; /* tekst bliver ikke vist hvis det går ud over kanten*/
+  background-color: rgb(132,150,178);
+}
+
+.topnav a {
+  float: left;
+  display: inline-block; /* linkene fylder hele linjen*/
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-style: bold;
+  font-size: 30px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-decoration: none; /* fjerner understregen på link*/
+  
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: rgb(256, 256 ,256);
+  color: black;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: left;
+  background: rgb(80,160,200);
+  margin-top: 20px;
 }
