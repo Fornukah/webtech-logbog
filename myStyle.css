@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(194, 233, 243, 96);
+  background-color: rgb(150, 200, 150, 96);
 }
 
 /* overskrift h1 design */
@@ -17,7 +17,7 @@ font-style: bold;
 font-size: 30px;
 font-family: "Lucida Console", "Courier New", monospace;
 text-align: center; 
-border: 10px solid rgb(132, 187, 245, 96);
+border: 10px solid rgb(100, 130, 100, 96);
 padding: 30px;
 }
 
@@ -28,13 +28,20 @@ font-size: 20px;
 text-align: left;
 }
 
+p1{
+font-style: bold;
+font-size: 25px;
+ font-family: Arial, Helvetica, sans-serif; 
+text-align: left;
+}
+
 a{
 font-style: normal;
 font-size: 20px;
  font-family: Arial, Helvetica, sans-serif; 
 text-align: left;
 text-decoration: none; /* fjerner understregen på link*/
-color: rgb(0, 0, 0);
+color: rgb(30, 30, 30);
 }
 
 a:hover {
@@ -45,6 +52,7 @@ text-align: left;
 text-decoration: none; /* fjerner understregen på link*/
 color: rgb(100, 100, 100);
 }
+
 
 pre{
   background-color: red;
@@ -63,11 +71,14 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-}
-.card{
-  float: left;
   width: 100%;
+}
+
+.card{
+  float: center;
+  width: 100%;
+  background-color: rgb(140, 130, 220)
+  
 }
 /* Style the top navigation bar */
 .topnav {
@@ -77,8 +88,8 @@ img {
 
 .topnav a {
   float: left;
-  display: inline-block; /* linkene fylder hele linjen*/
-  color: #f2f2f2;
+  display: inline-block /* linkene fylder hele linjen*/
+  text-color: rgb(256, 256, 256);
   text-align: center;
   padding: 14px 16px;
   font-style: bold;
