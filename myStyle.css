@@ -71,22 +71,34 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 30%;
 }
 
 .card{
-  float: center;
-  width: 100%;
+  float: left;
+  width: 50%;
   background-color: rgb(140, 130, 220)
+}
+
+.card1{
+  float: right;
+  width: 50%;
   
 }
+
+.card2{
+  float: right;
+  width: 50%;
+  background-color: rgb(140, 130, 220)
+}
+
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden; /* tekst bliver ikke vist hvis det går ud over kanten*/
   background-color: rgb(132,150,178);
 }
 
-.topnav a {
+.topnav a{
   float: left;
   display: inline-block /* linkene fylder hele linjen*/
   text-color: rgb(256, 256, 256);
@@ -111,4 +123,6 @@ img {
   text-align: left;
   background: rgb(80,160,200);
   margin-top: 20px;
+  width: 97%;
+  float: left;
 }
