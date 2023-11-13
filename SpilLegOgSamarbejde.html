@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="dk">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="myStyle.css">
@@ -17,23 +17,66 @@
 </div>
     
 <h2>Indtroduction</h2>
-    <p>Vi skulle prøve at udvikle et spil, som vha MIT studerendes Makey-Makey, skulle få bevægelse tilbage i børns legeliv.<br> Inspirationen kunne komme fra spil som Fægtning, Dance, Dance Revolution. <br> Derefter skulle vii brainstorme, udvikle, code og fremlægge et spil.</p>
+    <p>Vi skulle prøve at udvikle et spil, som vha MIT studerendes Makey-Makey, 
+        skulle få bevægelse tilbage i børns legeliv.
+        <br> 
+        Inspirationen kunne komme fra spil som Fægtning, Dance, Dance Revolution. 
+        <br> 
+        Derefter skulle vii brainstorme, udvikle, code i Javascript og fremlægge et spil.</p>
     <br>
     <br>
-<div class="card2">
-    <h2>Teoretiske Overvejelser</h2>
-     <p></p>
-    <br>
-    <br>
-    </div>
 <div class="card">
+    <h2>Teoretiske Overvejelser</h2>
+     <p>Vi skulle overveje, blandt andet, hvordan vi bedst skulle kommunikere vores spil, 
+        og skabe den bedst mulige UX.
+    <br> 
+    dette inkluderer f.eks, farvevalg, opsætning af indhold ift hvor man ligger scoreboardet m.m.
+<br>
+Vi skulle også overveje hvordan vi afbalncerede sværhedsgraden, i et spil, som skulle spilles fysisk.
+<br>
+F.eks hvor meget spilleren skulle rykke op og ned pr tryk af en knap, skruede vi meget på,
+så det både var naturligt og gennemskueligt, men også svært nok for spillererne.
+ </p>
+
+    <br>
+    <br>
+
+    </div>
+<div class="card2">
     <h2>Teoretiske Overvejelser I Praksis</h2>
      <p></p>
+
     <br>
     <br>
+
 </div>
 <div class="footer">
     <h2>Kodeeksempel</h2>
+    <pre>
+        <code>
+            function setup() {
+                createCanvas(1536,864); // Defines the game area
+                image(background,0,0); // Loads the background
+                PlayerOneY = 0.5*864-25; // Defines the start position on the Y axis for Player One
+                PlayerOneX = 300; // Defines the start position on the X axis for Player One
+                PlayerTwoY = 0.5*864-25; // Defines the start position on the Y axis for Player Two
+                PlayerTwoX = 1536-300; // Defines the start position on the X axis for Player Two
+                BallY = 0.5*864; // Defines the start position for the Y axis for the ball
+                BallX = 0.5*1536-10; // Defines the start position for the X axis for the ball
+                ScoreOne = 0; // Sets the start score for Player One
+                ScoreTwo = 0; // Sets the start score for Player Two
+                xSpeed = 0; // Defines the initial speed on the X axis for the ball
+                ySpeed = 0; // Defines the initial speed on the Y axis for the ball
+                Start = 0; // Defines that the game is not started
+              }
+        </code>
+      </pre>
+    <p> I kodestykke, defineres der alt fra størelsen på siden til boldens fart og scoren.
+        <br>
+        Vi valgte derudover også at inkludere en tekts der tilhørte hvert kodestykke 
+        så vi selv efterfølgende kunne huske hvad de enkeltvis gjorde.
+    </p>
+
 </div>
 </body>
 </html>

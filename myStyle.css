@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(150, 200, 150, 96);
+  background-color: rgb(231, 234, 231);
 }
 
 /* overskrift h1 design */
@@ -8,7 +8,7 @@ font-style: bold;
 font-size: 40px;
 font-family: "Lucida Console", "Courier New", monospace;
 text-align: center;
-border: 15px solid rgb(132, 151, 245 , 96);
+border: 15px solid rgb(0, 0, 0);
 padding: 20px;
 }
 
@@ -17,7 +17,7 @@ font-style: bold;
 font-size: 30px;
 font-family: "Lucida Console", "Courier New", monospace;
 text-align: center; 
-border: 10px solid rgb(100, 130, 100, 96);
+border: 10px solid rgb(0, 0, 0);
 padding: 30px;
 }
 
@@ -26,6 +26,7 @@ font-style: normal;
 font-size: 20px;
  font-family: Arial, Helvetica, sans-serif; 
 text-align: left;
+padding: 5px;
 }
 
 p1{
@@ -42,21 +43,19 @@ font-size: 20px;
 text-align: left;
 text-decoration: none; /* fjerner understregen på link*/
 color: rgb(30, 30, 30);
+padding: 5px;
 }
 
 a:hover {
 font-style: normal;
 font-size: 20px;
- font-family: Arial, Helvetica, sans-serif; 
+font-family: Arial, Helvetica, sans-serif; 
 text-align: left;
 text-decoration: none; /* fjerner understregen på link*/
 color: rgb(100, 100, 100);
 }
 
 
-pre{
-  background-color: red;
-}
 
 .boxFloatMiddle{
 float: middle;
@@ -71,25 +70,25 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 50%;
 }
 
 .card{
   float: left;
-  width: 50%;
-  background-color: rgb(140, 130, 220)
+  width: 48%;
+  background-color: rgb(198, 192, 247)
 }
 
 .card1{
   float: right;
-  width: 50%;
+  width: 48%;
   
 }
 
 .card2{
   float: right;
-  width: 50%;
-  background-color: rgb(140, 130, 220)
+  width: 48%;
+  background-color: rgb(198, 192, 247)
 }
 
 /* Style the top navigation bar */
@@ -99,9 +98,8 @@ img {
 }
 
 .topnav a{
-  float: left;
-  display: inline-block /* linkene fylder hele linjen*/
-  text-color: rgb(256, 256, 256);
+  display: inline-block; /* linkene fylder hele linjen*/
+  color: rgb(256, 256, 256);
   text-align: center;
   padding: 14px 16px;
   font-style: bold;
@@ -125,4 +123,11 @@ img {
   margin-top: 20px;
   width: 97%;
   float: left;
+}
+pre code {
+  background-color:rgb(69, 69, 69);
+  border: 5px solid white;
+  display: block;
+  padding: 20px;
+  color: white;
 }
