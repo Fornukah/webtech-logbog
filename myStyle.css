@@ -73,22 +73,26 @@ img {
   width: 50%;
 }
 
-.card{
+.cardLeftVis{
   float: left;
   width: 48%;
   background-color: rgb(198, 192, 247)
 }
 
-.card1{
+.cardRightInvis{
   float: right;
   width: 48%;
-  
 }
 
-.card2{
+.cardRightVis{
   float: right;
   width: 48%;
   background-color: rgb(198, 192, 247)
+}
+
+.cardLeftInvis{
+  float: left;
+  width: 48%;
 }
 
 /* Style the top navigation bar */

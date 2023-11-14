@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="myStyle.css">
 <title>Josh' Logbog 23/24</title>
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="JoSø.png">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
         Derefter skulle vii brainstorme, udvikle, code i Javascript og fremlægge et spil.</p>
     <br>
     <br>
-<div class="card">
+<div class="cardLeftVis">
     <h2>Teoretiske Overvejelser</h2>
      <p>Vi skulle overveje, blandt andet, hvordan vi bedst skulle kommunikere vores spil, 
         og skabe den bedst mulige UX.
@@ -42,9 +42,16 @@ så det både var naturligt og gennemskueligt, men også svært nok for spillere
     <br>
 
     </div>
-<div class="card2">
+<div class="cardRightVis">
     <h2>Teoretiske Overvejelser I Praksis</h2>
-     <p></p>
+     <p>I det nedenstående kodeeksempel ser vi netop hvordan vi definerer hvad der sker 
+        idet spilleren trykker på diverse Knapper. Vi definerede at spilleren ville rykke 45 pixels 
+        pr tryk, hvilket vi følte var den perfekte balance, og gav spilleren så stor en mulighed for 
+        at ramme bolden uden "blindspots". 
+        <br>
+        Netop disse blindspots var et problem vi havde, at mellemrummet imellem tryk skabte steder 
+        som spilleren ikke kunne ramme.
+     </p>
 
     <br>
     <br>
@@ -54,29 +61,34 @@ så det både var naturligt og gennemskueligt, men også svært nok for spillere
     <h2>Kodeeksempel</h2>
     <pre>
         <code>
-            function setup() {
-                createCanvas(1536,864); // Defines the game area
-                image(background,0,0); // Loads the background
-                PlayerOneY = 0.5*864-25; // Defines the start position on the Y axis for Player One
-                PlayerOneX = 300; // Defines the start position on the X axis for Player One
-                PlayerTwoY = 0.5*864-25; // Defines the start position on the Y axis for Player Two
-                PlayerTwoX = 1536-300; // Defines the start position on the X axis for Player Two
-                BallY = 0.5*864; // Defines the start position for the Y axis for the ball
-                BallX = 0.5*1536-10; // Defines the start position for the X axis for the ball
-                ScoreOne = 0; // Sets the start score for Player One
-                ScoreTwo = 0; // Sets the start score for Player Two
-                xSpeed = 0; // Defines the initial speed on the X axis for the ball
-                ySpeed = 0; // Defines the initial speed on the Y axis for the ball
-                Start = 0; // Defines that the game is not started
+            function keyPressed() {
+                if (Start == 0) { // Check if the game has been started
+                  if (keyCode===SHIFT) { // Check if Shift is pressed
+                    ScoreOne = 0
+                    ScoreTwo = 0
+                    xSpeed = random(-4,4) // Randomly chooses a speed for the ball on the X axis
+                    Start = 1 // Tells the game that it is started
+                  } 
+                } else if (keyCode === UP_ARROW) { // Check if Arrow Up is pressed
+                  if (PlayerOneY>0) { // Check if Player One is at the top of the canvas
+                    PlayerOneY -= 45 // Moves Player One up by 45
+                  }
+                } else if (keyCode === DOWN_ARROW) { // Check if Arrow Down is pressed
+                  if (PlayerOneY+25<864) { // Check if Player One is at the bottom of the canvas
+                    PlayerOneY += 45 // Moves Player One down by 45
+                  }
+                } else if (keyCode === LEFT_ARROW) { // Check if Arrow Left is pressed
+                  if (PlayerTwoY>0) { // Check if Player Two is at the top of the canvas
+                    PlayerTwoY -= 45 // Moves Player Two up by 45
+                  }
+                } else if (keyCode === RIGHT_ARROW) { // Check if Arrow Right is pressed
+                  if (PlayerTwoY+25<864) { // Check if Player Two is at the bottom of the canvas
+                    PlayerTwoY += 45 // Moves Player Two down by 45
+                  }
+                }
               }
         </code>
       </pre>
-    <p> I kodestykke, defineres der alt fra størelsen på siden til boldens fart og scoren.
-        <br>
-        Vi valgte derudover også at inkludere en tekts der tilhørte hvert kodestykke 
-        så vi selv efterfølgende kunne huske hvad de enkeltvis gjorde.
-    </p>
-
 </div>
 </body>
 </html>
