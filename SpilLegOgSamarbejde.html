@@ -47,7 +47,6 @@ Vi skulle også overveje hvordan vi afbalncerede sværhedsgraden, i et spil, som
 F.eks hvor meget spilleren skulle rykke op og ned pr tryk af en knap, skruede vi meget på,
 så det både var naturligt og gennemskueligt, men også svært nok for spillererne.
  </p>
-
     </div>
 <div class="cardRightVis">
     <h2>Teoretiske Overvejelser I Praksis</h2>
@@ -58,11 +57,23 @@ så det både var naturligt og gennemskueligt, men også svært nok for spillere
         <br>
         Netop disse blindspots var et problem vi havde, at mellemrummet imellem tryk skabte steder 
         som spilleren ikke kunne ramme.
+        </p>
+        <pre>
+          <code>
+ else if (keyCode === UP_ARROW) { // Check if Arrow Up is pressed
+  if (PlayerOneY>0) { // Check if Player One is at the top of the canvas
+    PlayerOneY -= 45 // Moves Player One up by 45
+          </code>
+        </pre>
+        <p>
+        I kodeeksempelet ovenover kan man først se at jeg definerer den næste del som en "if" funktion.
+        Så den tjekker altid om knappen shift er trykket og derefter om den ellers trykker på netop Pil op tasten
+        Så tjekker den om Spiller 1 er på toppen under toppen af billedet, hvis den er, skal den rykke 45 op.
      </p>
-
-    <br>
-    <br>
-
+    </div>
+<br>
+    <div class="cardLeftVis">
+  <img src="20230919_092244.jpg" width=100% alt="Picture of People playing the game">
 </div>
 <div class="footer">
     <h2>Kodeeksempel</h2>
