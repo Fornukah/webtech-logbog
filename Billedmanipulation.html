@@ -39,75 +39,48 @@
     <br>
 <div class="cardLeftVis">
     <h2>Teoretiske Overvejelser</h2>
-     <p>Vi skulle overveje, blandt andet, hvordan man vha matematik 
+     <p>Vi skulle overveje, blandt andet, hvordan man vha matematik kan redigere pixelværdier, 
+      netop værdierne for rød, grøn, blå og gennemsigtighed, for at ændre et billeds generelle udtryk.
     <br> 
-    dette inkluderer f.eks, farvevalg, opsætning af indhold ift hvor man ligger scoreboardet m.m.
-<br>
-Vi skulle også overveje hvordan vi afbalncerede sværhedsgraden, i et spil, som skulle spilles fysisk.
-<br>
-F.eks hvor meget spilleren skulle rykke op og ned pr tryk af en knap, skruede vi meget på,
-så det både var naturligt og gennemskueligt, men også svært nok for spillererne.
+    Vi kunne f.eks, forskyde grønne og røde værdier til at give en "3d effekt", eller lave 
+    et mere kontrastrigt billede ved at enten maksimere eller minimere hver pixelværdi.
  </p>
     </div>
 <div class="cardRightVis">
     <h2>Teoretiske Overvejelser I Praksis</h2>
-     <p>I det nedenstående kodeeksempel ser vi netop hvordan vi definerer hvad der sker 
-        idet spilleren trykker på diverse Knapper. Vi definerede at spilleren ville rykke 45 pixels 
-        pr tryk, hvilket vi følte var den perfekte balance, og gav spilleren så stor en mulighed for 
-        at ramme bolden uden "blindspots". 
+     <p>I det nedenstående kodeeksempel ser vi netop hvordan koden tager en enkel pixelværdi og maksimere hver værdie
+      for så at skabe dette "kontrastrige" billede.
         <br>
-        Netop disse blindspots var et problem vi havde, at mellemrummet imellem tryk skabte steder 
-        som spilleren ikke kunne ramme.
+        Hvad vi dog endte med at gøre var at vi ikke maksimerede værdierne, men kun lige tæt på, for at give
+        et pænere og mere spændende billede at beskue. 
         </p>
         <pre>
           <code>
- else if (keyCode === UP_ARROW) { // Check if Arrow Up is pressed
-  if (PlayerOneY>0) { // Check if Player One is at the top of the canvas
-    PlayerOneY -= 45 // Moves Player One up by 45
+            function shadowWeight(threshold){
+              //Forøg farve
+              for (let k=0;k<3;k+=1){
+                  if (c[k] > threshold) {
+                      c[k]=255;
+                    } 
+                     //Formindsk farve
+                    if (c[k] < threshold) {
+                      c[k]=255/8;
+                    }      
+              }
+              }
           </code>
         </pre>
         <p>
-        I kodeeksempelet ovenover kan man først se at jeg definerer den næste del som en "if" funktion.
-        Så den tjekker altid om knappen shift er trykket og derefter om den ellers trykker på netop Pil op tasten
-        Så tjekker den om Spiller 1 er på toppen under toppen af billedet, hvis den er, skal den rykke 45 op.
+        I kodeeksempelet ovenover kan man se hvordan vi har en threshold, som vi tidligere har defineret til 200
+        +- vores musposition. Derefter så tager vi for hver værdi og enten maksimerer den 
+        eller minimere den til en ottendedel af maksimum, netop 255.
+        <br>
+        I den 3 linje gør vi at den kører hver vores pixelværdi igennem, der er netop 3 værdier mellem 0-2.
+        Så når vi siger at den skal køre + 1 hver gang, gør vi at den kører igennem hver pixelværdi,
+        en efter en.
      </p>
     </div>
 <br>
-    <div class="cardLeftVis">
-  <img src="20230919_092244.jpg" width=100% alt="Picture of People playing the game">
-</div>
-<div class="footer">
-    <h2>Kodeeksempel</h2>
-    <pre>
-        <code>
-            function keyPressed() {
-                if (Start == 0) { // Check if the game has been started
-                  if (keyCode===SHIFT) { // Check if Shift is pressed
-                    ScoreOne = 0
-                    ScoreTwo = 0
-                    xSpeed = random(-4,4) // Randomly chooses a speed for the ball on the X axis
-                    Start = 1 // Tells the game that it is started
-                  } 
-                } else if (keyCode === UP_ARROW) { // Check if Arrow Up is pressed
-                  if (PlayerOneY>0) { // Check if Player One is at the top of the canvas
-                    PlayerOneY -= 45 // Moves Player One up by 45
-                  }
-                } else if (keyCode === DOWN_ARROW) { // Check if Arrow Down is pressed
-                  if (PlayerOneY+25<864) { // Check if Player One is at the bottom of the canvas
-                    PlayerOneY += 45 // Moves Player One down by 45
-                  }
-                } else if (keyCode === LEFT_ARROW) { // Check if Arrow Left is pressed
-                  if (PlayerTwoY>0) { // Check if Player Two is at the top of the canvas
-                    PlayerTwoY -= 45 // Moves Player Two up by 45
-                  }
-                } else if (keyCode === RIGHT_ARROW) { // Check if Arrow Right is pressed
-                  if (PlayerTwoY+25<864) { // Check if Player Two is at the bottom of the canvas
-                    PlayerTwoY += 45 // Moves Player Two down by 45
-                  }
-                }
-              }
-        </code>
-      </pre>
 </div>
 </body>
 </html>
