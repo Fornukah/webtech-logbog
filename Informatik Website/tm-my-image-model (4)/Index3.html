@@ -1,0 +1,127 @@
+<div>Teachable Machine Image Model - p5.js and ml5.js</div>
+<script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/addons/p5.dom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ml5@latest/dist/ml5.min.js"></script>
+<script type="text/javascript">
+  // Classifier Variable
+  let classifier;
+  // Model URL
+  let imageModelURL = '/tm-my-image-model(4)/';
+  
+  // Video
+  let video;
+  let flippedVideo;
+  // To store the classification
+  let label = "";
+
+  //bil
+  let x = 400;
+  let y = 400;
+  let image_place;
+  let image_default;
+  let img_down;
+  let img_left;
+  let img_right;
+  let img_up;
+
+  // Load the model first
+  function preload() {
+
+    classifier = ml5.imageClassifier(imageModelURL + 'model.json');    
+  
+    img = loadImage('road (1).jpg');
+
+    image_place = loadImage('carup.png');
+    image_default = loadImage('carup.png')
+    img_left = loadImage('carleft.png');
+    img_right = loadImage('carright.png');
+    img_up = loadImage('carup.png');
+    img_down = loadImage('cardown.png');
+  }
+
+  function setup() {
+    createCanvas(640, 600);
+    // Create the video
+    video = createCapture(VIDEO);
+    video.size(320, 240);
+    video.hide();
+
+    flippedVideo = ml5.flipImage(video);
+    // Start classifying
+    classifyVideo();
+
+  }
+
+  function draw() {
+    limit();
+    steer();
+    background(0);
+    // Draw the video
+    image(flippedVideo, 0, 0);
+
+    // Draw the label
+    fill(255);
+    textSize(16);
+    textAlign(CENTER);
+    text(label, width / 2, 240 + 13);
+
+    image(img,0,260);
+    fill(255);
+    image(image_default, x, y, 70, 70)
+    image(img_place, x, y, 70, 70);
+
+    console.log(label);
+  }
+
+
+  function limit(){
+    if (x<=0){
+      x=5;
+    }
+    if (x>=640-55){   
+      x=640-55;
+    }  
+    if (y<=260){
+      y=260;
+    }
+    if (y>=600-55){   
+      y=600-55;
+    }  
+  }
+  function steer(){
+    if (label==="Left"){
+      x=x-1;
+      image_place = img_left;
+    } else if (label==="Right"){
+      x=x+1;
+    } else if (label==="Stop"){
+      y=y+1;
+    } else if (label==="Go"){
+      y=y-1;
+    } else if (label==="Blank"){
+      y=y; x=x;
+ }
+}
+
+  // Get a prediction for the current video frame
+  function classifyVideo() {
+    flippedVideo = ml5.flipImage(video)
+    classifier.classify(flippedVideo, gotResult);
+    flippedVideo.remove();
+
+  }
+
+  // When we get a result
+  function gotResult(error, results) {
+    // If there is an error
+    if (error) {
+      console.error(error);
+      return;
+    }
+    // The results are in an array ordered by confidence.
+    // console.log(results[0]);
+    label = results[0].label;
+    // Classifiy again!
+    classifyVideo();
+  }
+</script>
