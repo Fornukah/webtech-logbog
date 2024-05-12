@@ -1,0 +1,9 @@
+ID,theme,explanation,image
+1,Databaser,"Hvor mange forbindelser der kan være mellem to databaser, f.eks hvor mange “ejere” til hver “hund”",Forklar Relationsgraden
+2,Databaser,Den nøgle som alle attributter er forbundet til,Forklar Primærnøglen
+3,Databaser,"en kolonne der indeholder de samme værdier som en primærnøgle i en anden tabel, men værdierne behøver ikke være i samme rækkefølge, eller at være unikke.",Forklar Fremmednøglen
+4,Databaser,"En kolonne der indeholder de samme værdier som en primærnøgle i en anden tabel, men værdierne behøver ikke være i samme rækkefølge, eller at være unikke.",Forklar Sekundærnøglen
+5,Databaser,"I en tre-lags-arkitektur indeles et program i tre lag, hvilket er er nyttigt i implementeringen af programmer, da de tre lag så vidt mulig holdes adskilte og dermed er hele programmet lettere at overskue.",Forklar 3-lags arkitektur
+6,Databaser,Det øverste lag der håndterer modtagelse og præsentation af data. Dette lag er kendetegnet ved at være ”tæt” på brugeren af programmet. Dette vil ofte være brugergrænsefladen.,Forklar Præsentationslag
+7,Databaser,Det midterste lag der håndterer udvekslingen af data mellem præsentationslaget og datalaget. Dette lag står for beregningerne.,Forklar Logiklag
+8,Databaser,Det nederste lag der opbevarer og håndterer data. Dette lag er også kendetegnet ved at være ”tæt” på computeren. Dette lag kan være struktureret som en database.,Forklar Datalag

@@ -1,0 +1,27 @@
+ID,theme,explanation,image
+1,Databaser,"Hvor mange forbindelser der kan være mellem to databaser, f.eks hvor mange 'ejere' til hver 'hund'",Relationsgraden
+2,Databaser,Den nøgle som alle attributter er forbundet til,Primærnøglen
+3,Databaser,"En kolonne der indeholder de samme værdier som en primærnøgle i en anden tabel, men værdierne behøver ikke være i samme rækkefølge, eller at være unikke.",Fremmednøglen
+4,Databaser,"En kolonne der indeholder de samme værdier som en primærnøgle i en anden tabel, men værdierne behøver ikke være i samme rækkefølge, eller at være unikke.",Sekundærnøglen
+5,Databaser,"I en tre-lags-arkitektur indeles et program i tre lag, hvilket er er nyttigt i implementeringen af programmer, da de tre lag så vidt mulig holdes adskilte og dermed er hele programmet lettere at overskue.",3-lags arkitektur
+6,Databaser,Det øverste lag der håndterer modtagelse og præsentation af data. Dette lag er kendetegnet ved at være 'tæt' på brugeren af programmet. Dette vil ofte være brugergrænsefladen.,Præsentationslag
+7,Databaser,Det midterste lag der håndterer udvekslingen af data mellem præsentationslaget og datalaget. Dette lag står for beregningerne.,Logiklag
+8,Databaser,Det nederste lag der opbevarer og håndterer data. Dette lag er også kendetegnet ved at være 'tæt' på computeren. Dette lag kan være struktureret som en database.,Datalag
+9,Javascript,"Får en del af programmet til at gentage sig, skrive med ‘while’ eller ‘for’.",Løkke
+10,Javascript,Får programmet at udfører en handling hvis input er sandt ‘True’.,If-statement
+11,Javascript,Får programmet at udfører en handling hvis input er sandt ‘True’.,Betingelse
+12,Javascript,Er med til at strukturere koden. Funktioner kan køres flere gange og man undgår at skrive det samme mange gange.,Funktioner
+13,Javascript,"Beholder for information, tal eller tekst.",Variable
+14,Billedmanipulation,"Rød-Grøn-Blå, de 3 værdier (samt gennemsigtighed) som danner alle farver set på en skærm. Har alle en værdi mellem 0 og 255.",RGB
+15,Billedmanipulation,"Den mindste enhed af et billede, som kan manipuleres individuelt. Et billede består af et gitter af pixels, hvor hver pixel har en bestemt farve og lysstyrke.",Pixel
+16,Cybersikkerhed,"En sikkerhedsforanstaltning, der kræver mere end én form for autentificering fra den pågældende bruger, normalt i form af noget, de ved (f.eks. adgangskode) og noget, de har (f.eks. en engangskode fra en app).",MFA (Multi-Factor-Authentication)
+17,Cybersikkerhed,"En sikkerhedsforanstaltning, der kræver autentificering via to forskellige metoder, normalt noget, brugeren ved (f.eks. adgangskode) og noget, brugeren har (f.eks. en SMS-kode).",2FA (2-Factor-Authentication)
+18,Cybersikkerhed,"En proces, der omdanner inputdata til en fast længde værdi, normalt en streng af tal og bogstaver. Hashing bruges ofte til at sikre, at data forbliver uændret og sikret under overførsel og lagring.",Hashing
+19,Cybersikkerhed,"Kunst og videnskab om at kommunikere og gemme data på en måde, der kun kan læses af de tilsigtede modtagere. Kryptografi bruger algoritmer til at konvertere data til en form, der er ulæselig for uautoriserede personer.",Kryptografi
+20,Machine Learning,"En gren af kunstig intelligens, der fokuserer på udvikling af computeralgoritmer, der kan forbedre sig selv gennem erfaring og træning på data.",Machine Learning
+21,Machine Learning,"Traditionel tilgang til at udvikle software, hvor instruktionerne for at løse et problem er direkte specificeret af programmøren.",Klassisk Programmering
+22,Machine Learning,"Et koncept inden for kunstig intelligens, der refererer til udfordringen med at sikre, at en AI's mål og handlinger er i overensstemmelse med de ønskede mål for dens skabere eller for samfundet som helhed.",The Alignment Problem
+23,Machine Learning,"De individuelle målbare egenskaber eller unikke karakteristika ved data, som bruges som input til et machine learning-model. Features kan være alt fra numeriske værdier til tekst eller billeder.",Features
+24,Machine Learning,"Den ønskede output eller det forudsagte resultat af et machine learning-model baseret på de givne inputdata. Målet er det, modellen forsøger at forudsige eller klassificere.",Target
+25,Webteknologier,"Designprocessen for at skabe systemer, hvor brugere kan interagere effektivt med computerbaserede systemer, herunder websteder og applikationer. Dette indebærer at skabe en intuitiv brugergrænseflade og navigationsstruktur.",Interaktionsdesign
+26,Webteknologier,"En bog af Steve Krug, der fokuserer på principperne for brugervenligt webdesign og brugervenlige weboplevelser. Bogen fremhæver vigtigheden af at skabe en simpel og intuitiv brugergrænseflade, der ikke kræver meget tanke fra brugeren.",'Don’t Make Me Think'

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <link rel="stylesheet" href="/myStyle.css">
+  <title>Josh' Logbog 23/24</title>
+  <link rel="icon" type="image/x-icon" href="/JoSø.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <body>
+<h1>Vælg tilfældigt FN mål</h1>
+<p id="overskrift"></p>
+<img id="myImage" src="https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/samlet.jpg?raw=true" style="width: 50%;"> 
+<p id="beskrivelse"></p> 
+<p id="progression"></p>
+<button type="button" class="ButtonFN" onclick="ny()">ny</button>
+<button type="button" class="ButtonFN" onclick="valgte()">vælg</button> <!--Laver en knap, som referer til valgtefunktionen i js koden -->
+<p id="valg"></p>
+</body>
+
+</html>
+
+<script>
+  let x; 
+  let FN;
+  let listeMedValgte = [];
+  let data;
+  var overskrift = null
+  var beskrivelse = null
+  var progression = null
+
+function ny() {
+  var pic;
+  x = Math.floor(Math.random()*5+1);
+  console.log(x);
+  genererTekst(x);
+  pic = "https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/FN"+x+".jpg?raw=true"  
+  document.getElementById('overskrift').innerHTML = overskrift;
+  document.getElementById('beskrivelse').innerHTML = beskrivelse;
+  document.getElementById('progression').innerHTML = progression;
+  document.getElementById('myImage').src = pic;
+}
+
+function valgte(){
+  console.log(x);
+  console.log(FN);
+  listeMedValgte.push(overskrift) //Tilføger overskrift som det sidste element i listen med valgte
+  document.getElementById('valg').innerHTML = listeMedValgte; //leder efter id'et valgte og får den til at skrive værdien i variablen vi har defineret og skriver det så i html-koden
+}
+
+function genererTekst(x){
+  for (var i = 0; i < data.length; i++) { //Tjekker om ID = x sammen med if funktionen indtil at ID = x
+      if (data[i]["ID"] == x) {
+        overskrift = data[i]['overskrift']; //når ID=X returner den overskriften fra databasen
+        beskrivelse = data[i]['beskrivelse'];
+        progression = data[i]['progression'];
+ 
+        break; // exit efter loop
+      }
+    }
+}
+window.onload = function() {
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "FN.csv", true); //Referer til FN.csv filen
+xhr.responseType = "text";
+xhr.onload = function() {
+  data = Papa.parse(xhr.responseText, {
+    header: true // set this to true if the first row contains the header names
+  }).data;
+};
+xhr.send();
+}
+</script>
