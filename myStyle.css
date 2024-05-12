@@ -195,3 +195,13 @@ pre code {
   padding: 20px;
   color: white;
 }
+
+.ButtonFN {
+  font-size: 17px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  text-align: left;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: double;
+}

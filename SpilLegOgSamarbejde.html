@@ -77,38 +77,46 @@ så det både var naturligt og gennemskueligt, men også svært nok for spillere
     <div class="cardLeftVis">
   <img src="20230919_092244.jpg" width=100% alt="Picture of People playing the game">
 </div>
-<div class="footer">
-    <h2>Kodeeksempel</h2>
-    <pre>
-        <code>
-            function keyPressed() {
-                if (Start == 0) { // Check if the game has been started
-                  if (keyCode===SHIFT) { // Check if Shift is pressed
-                    ScoreOne = 0
-                    ScoreTwo = 0
-                    xSpeed = random(-4,4) // Randomly chooses a speed for the ball on the X axis
-                    Start = 1 // Tells the game that it is started
-                  } 
-                } else if (keyCode === UP_ARROW) { // Check if Arrow Up is pressed
-                  if (PlayerOneY>0) { // Check if Player One is at the top of the canvas
-                    PlayerOneY -= 45 // Moves Player One up by 45
-                  }
-                } else if (keyCode === DOWN_ARROW) { // Check if Arrow Down is pressed
-                  if (PlayerOneY+25<864) { // Check if Player One is at the bottom of the canvas
-                    PlayerOneY += 45 // Moves Player One down by 45
-                  }
-                } else if (keyCode === LEFT_ARROW) { // Check if Arrow Left is pressed
-                  if (PlayerTwoY>0) { // Check if Player Two is at the top of the canvas
-                    PlayerTwoY -= 45 // Moves Player Two up by 45
-                  }
-                } else if (keyCode === RIGHT_ARROW) { // Check if Arrow Right is pressed
-                  if (PlayerTwoY+25<864) { // Check if Player Two is at the bottom of the canvas
-                    PlayerTwoY += 45 // Moves Player Two down by 45
-                  }
-                }
-              }
-        </code>
-      </pre>
+<div class="footer"> 
+  <div class="cardLeftInvis">
+    <p>
+      <a href="index.html"> Hjem</a>
+      <br>
+      <a href="Projekter.html"> Projekter</a>
+      <br>
+      <a href="SpilLegOgSamarbejde.html"> Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="CyberSikkerhed.html"> Cybersikkerhed</a>
+      <br>
+      <a href="webteknologier.html"> WebTeknologier</a>
+      <br>
+      <a href="Billedmanipulation.html"> Billedmanipulation</a>
+      <br>
+      <a href="MachineLearning.html"> Machine Learning</a>
+      <br>
+      <a href="DataBaser.html"> Databaser</a>
+    </p>
+  </div>
+
+  <div class="cardRightInvis">
+    <p>
+      <a href="kontakt.html"> Kontakt</a>
+      <br>
+      <a href="Galleri.html"> Gallerier</a>
+      <br>
+      <a href="Galleri-SLOS.html"> Galleri til Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="Galleri-DB.html"> Galleri til Cybersikkerhed</a>
+      <br>
+      <a href="Galleri-WT.html"> Galleri til WebTeknologier</a>
+      <br>
+      <a href="Galleri-BM.html"> Galleri til Billedmanipulation</a>
+      <br> 
+      <a href="Galleri-ML.html"> Galleri til Machine Learning</a>
+      <br> 
+      <a href="Galleri-DB.html"> Galleri til Databaser</a>
+    </p>
+  </div>
 </div>
 </body>
 </html>
