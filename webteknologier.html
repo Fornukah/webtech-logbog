@@ -5,9 +5,11 @@
 <link rel="stylesheet" href="myStyle.css">
 <title>Josh' Logbog 23/24</title>
 <link rel="icon" type="image/x-icon" href="JoSø.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,64 +25,114 @@
   <a href="Projekter.html">Projekter</a>
   <a href="kontakt.html">Kontakt</a>
 </div>
-
+    
 <h2>Indtroduction</h2>
-    <p></p>
-    <br>
+    <p>I dette forløb var det overordenede formål at lave netop dette portfolie, med udgangspunkt i læring at HTML-kode
+        samt læring af interaktionsdesign for at skabe et godt UI
+        <br> 
+        Vi arbejdede blandt andet med princippet "don't make me think" taget fra en bog af Steve Krug, som netop siger at 
+        et design skal ikke kræve aktiv tænkning for at kunne forstå det.
+        <br> 
+        Dette skulle som nævnt endeligt blive brugt til at lave en website, hvori man kunne finde logbøger for alle projekter lavet 
+        i skoleåret 23/24 i informatik.
+      </p>
     <br>
 <div class="cardLeftVis">
     <h2>Teoretiske Overvejelser</h2>
-   <p></p>
+     <p>
+        Under princippet "don't make me think" skulle vi blandt andet være sikre på at brugeren kunne gennemskue, f.eks hvad der er et link, hvor det fører hen.
+        Dette skulle gøres med farver, tekstfonte, tekststørrelse m.m. 
+    <br> 
     <br>
-    <br>
+        Vi tog gavn af inspiration fra andre websites, hvor vi kunne gennemskue fælles træk, som f.eks en header med 
+        links til undersider, et hieraki af information, kommunikeret ofte med tekststørrelse og font. Disse tendenser skulle
+        vi så forsøge at implimentere i vores website. F.eks kan man på denne website måske genkende headeren, de klassiske blå farver, hvordan tekstørrelse kommunikerer information
+        eller andet. 
+        <br>
+        Til at bringe dette til liv, skulle vi bruge HTML- og CSS-kode til at skabe dette. 
+<br>
+<br>
+        Vi skulle så også løbende opdatere logbogen, idet vi igennem skoleåret færdiggjorde diverse projekter.
+ </p>
     </div>
 <div class="cardRightVis">
     <h2>Teoretiske Overvejelser I Praksis</h2>
-    <p></p>
-    <br>
-    <br>
+     <p>I sin CSS-kode kan man så strukteret se hvordan man formaterer diverse fonte, tekststørrelse osv. til at 
+        skabe en nemt overskueligt website.
+        </p>
+        <pre>
+          <code>
+            a{
+                font-style: normal;
+                font-size: 17px;
+                font-family: 'Josefin Sans', sans-serif;
+                text-align: left;
+                text-decoration: none; /* fjerner understregen på link*/
+                color: rgb(100, 30, 70);
+                padding: 5px;
+                }
+                
+                a:hover {
+                font-size: 17px;
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: 600;
+                text-align: left;
+                text-decoration: none; /* fjerner understregen på link*/
+                color: rgb(100, 100, 130);
+                }
+          </code>
+        </pre>
+        <p>
+          I kodeeksempel kan man se hvordan jeg har formateret anchor, altså et link til en anden underside eller et andet website.
+          Det er opdelt i 2 overordnede kategorier, standarden og når man hoverer musen over linket. Her igennem ser man så principperne bag
+          interaktionsdesign. F.eks kan man se at teksten ændrer farve i det man har musen over linket, og "font-weighten" bliver større, altså teksten bliver mere fed.
+          Derigennem kan man så, som bruger, aktiv se hvad der er et link.
+     </p>
+    </div>
+<br>
+    <div class="cardLeftVis">
+  <img src="/Screenshot 2023-11-15 224018.png" width=100% alt="Tidlig version af sitet">
 </div>
 <div class="footer"> 
-    <div class="cardLeftInvis">
-      <p>
-        <a href="index.html"> Hjem</a>
-        <br>
-        <a href="Projekter.html"> Projekter</a>
-        <br>
-        <a href="SpilLegOgSamarbejde.html"> Spil, Leg og Samarbejde</a>
-        <br>
-        <a href="CyberSikkerhed.html"> Cybersikkerhed</a>
-        <br>
-        <a href="webteknologier.html"> WebTeknologier</a>
-        <br>
-        <a href="Billedmanipulation.html"> Billedmanipulation</a>
-        <br>
-        <a href="MachineLearning.html"> Machine Learning</a>
-        <br>
-        <a href="DataBaser.html"> Databaser</a>
-      </p>
-    </div>
-  
-    <div class="cardRightInvis">
-      <p>
-        <a href="kontakt.html"> Kontakt</a>
-        <br>
-        <a href="Galleri.html"> Gallerier</a>
-        <br>
-        <a href="Galleri-SLOS.html"> Galleri til Spil, Leg og Samarbejde</a>
-        <br>
-        <a href="Galleri-DB.html"> Galleri til Cybersikkerhed</a>
-        <br>
-        <a href="Galleri-WT.html"> Galleri til WebTeknologier</a>
-        <br>
-        <a href="Galleri-BM.html"> Galleri til Billedmanipulation</a>
-        <br> 
-        <a href="Galleri-ML.html"> Galleri til Machine Learning</a>
-        <br> 
-        <a href="Galleri-DB.html"> Galleri til Databaser</a>
-      </p>
-    </div>
+  <div class="cardLeftInvis">
+    <p>
+      <a href="index.html"> Hjem</a>
+      <br>
+      <a href="Projekter.html"> Projekter</a>
+      <br>
+      <a href="SpilLegOgSamarbejde.html"> Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="CyberSikkerhed.html"> Cybersikkerhed</a>
+      <br>
+      <a href="webteknologier.html"> WebTeknologier</a>
+      <br>
+      <a href="Billedmanipulation.html"> Billedmanipulation</a>
+      <br>
+      <a href="MachineLearning.html"> Machine Learning</a>
+      <br>
+      <a href="DataBaser.html"> Databaser</a>
+    </p>
   </div>
-    
+
+  <div class="cardRightInvis">
+    <p>
+      <a href="kontakt.html"> Kontakt</a>
+      <br>
+      <a href="Galleri.html"> Gallerier</a>
+      <br>
+      <a href="Galleri-SLOS.html"> Galleri til Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="Galleri-CS.html"> Galleri til Cybersikkerhed</a>
+      <br>
+      <a href="Galleri-WT.html"> Galleri til WebTeknologier</a>
+      <br>
+      <a href="Galleri-BM.html"> Galleri til Billedmanipulation</a>
+      <br> 
+      <a href="Galleri-ML.html"> Galleri til Machine Learning</a>
+      <br> 
+      <a href="Galleri-DB.html"> Galleri til Databaser</a>
+    </p>
+  </div>
+</div>
 </body>
 </html>
