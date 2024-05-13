@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/myStyle.css">
+<title>Josh' Logbog 23/24</title>
+<link rel="icon" type="image/x-icon" href="/JoSø.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+<h1>Logbog i Informatik 23/24<br><br>Billedmanipulation</h1>
+</div>
+<div class="topnav">
+  <a href="/index.html">Hjem</a>
+  <a href="https://rysensteen.dk/" target="_blank">Rysensteen</a>
+  <a href="/HTML/Projekter.html">Projekter</a>
+  <a href="/HTML/kontakt.html">Kontakt</a>
+</div>
+    
+<h2>Indtroduction</h2>
+    <p>Vi skulle kombinere filtre for at forstå hvordan man kan ændrer på pixelværdier til at ændre 
+        på billedets indtryk.
+        <br> 
+        Vi tog inspiration fra de givne filtre forarbejdet af vores lærer Mads Peter. 
+        <br> 
+        Derefter skulle vi brainstorme, code i Javascript og fremlægge vores filtre.
+      <br>
+      <br>
+        <a href="Billedmanipulation-master/index.html" target="_blank">Link til Filter</a>
+      </p>
+    <br>
+<div class="cardLeftVis">
+    <h2>Teoretiske Overvejelser</h2>
+     <p>Vi skulle overveje, blandt andet, hvordan man vha matematik kan redigere pixelværdier, 
+      netop værdierne for rød, grøn, blå og gennemsigtighed, for at ændre et billeds generelle udtryk.
+    <br> 
+    Vi kunne f.eks, forskyde grønne og røde værdier til at give en "3d effekt", eller lave 
+    et mere kontrastrigt billede ved at enten maksimere eller minimere hver pixelværdi.
+ </p>
+    </div>
+<div class="cardRightVis">
+    <h2>Teoretiske Overvejelser I Praksis</h2>
+     <p>I det nedenstående kodeeksempel ser vi netop hvordan koden tager en enkel pixelværdi og maksimere hver værdie
+      for så at skabe dette "kontrastrige" billede.
+        <br>
+        Hvad vi dog endte med at gøre var at vi ikke maksimerede værdierne, men kun lige tæt på, for at give
+        et pænere og mere spændende billede at beskue. 
+        </p>
+        <pre>
+          <code>
+            function shadowWeight(threshold){
+              //Forøg farve
+              for (let k=0;k<3;k+=1){
+                  if (c[k] > threshold) {
+                      c[k]=255;
+                    } 
+                     //Formindsk farve
+                    if (c[k] < threshold) {
+                      c[k]=255/8;
+                    }      
+              }
+              }
+          </code>
+        </pre>
+        <p>
+        I kodeeksempelet ovenover kan man se hvordan vi har en threshold, som vi tidligere har defineret til 200
+        +- vores musposition. Derefter så tager vi for hver værdi og enten maksimerer den 
+        eller minimere den til en ottendedel af maksimum, netop 255.
+        <br>
+        I den 3 linje gør vi at den kører hver vores pixelværdi igennem, der er netop 3 værdier mellem 0-2.
+        Så når vi siger at den skal køre + 1 hver gang, gør vi at den kører igennem hver pixelværdi,
+        en efter en.
+     </p>
+    </div>
+  <div class="cardLeftInvis">
+    <img src="Screenshot 2024-04-17 101814.png">
+  </div>
+<br>
+</div>
+<div class="footer"> 
+  <div class="cardLeftInvis">
+    <p>
+      <a href="index.html"> Hjem</a>
+      <br>
+      <a href="/HTML/Projekter.html"> Projekter</a>
+      <br>
+      <a href="/HTML/SpilLegOgSamarbejde.html"> Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="/HTML/CyberSikkerhed.html"> Cybersikkerhed</a>
+      <br>
+      <a href="/HTML/webteknologier.html"> WebTeknologier</a>
+      <br>
+      <a href="/HTML/Billedmanipulation.html"> Billedmanipulation</a>
+      <br>
+      <a href="/HTML/MachineLearning.html"> Machine Learning</a>
+      <br>
+      <a href="/HTML/DataBaser.html"> Databaser</a>
+    </p>
+  </div>
+
+  <div class="cardRightInvis">
+    <p>
+      <a href="/HTML/kontakt.html"> Kontakt</a>
+      <br>
+      <a href="/HTML/Galleri.html"> Gallerier</a>
+      <br>
+      <a href="/HTML/Galleri-SLOS.html"> Galleri til Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="/HTML/Galleri-CS.html"> Galleri til Cybersikkerhed</a>
+      <br>
+      <a href="/HTML/Galleri-WT.html"> Galleri til WebTeknologier</a>
+      <br>
+      <a href="/HTML/Galleri-BM.html"> Galleri til Billedmanipulation</a>
+      <br> 
+      <a href="/HTML/Galleri-ML.html"> Galleri til Machine Learning</a>
+      <br> 
+      <a href="/HTML/Galleri-DB.html"> Galleri til Databaser</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>
