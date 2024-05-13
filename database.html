@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="myStyle.css">
+<title>Josh' Logbog 23/24</title>
+<link rel="icon" type="image/x-icon" href="JoSø.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+<h1>Logbog i Informatik 23/24<br><br>Databaser</h1>
+</div>
+<div class="topnav">
+  <a href="/index.html">Hjem</a>
+  <a href="https://rysensteen.dk/" target="_blank">Rysensteen</a>
+  <a href="/Projekter.html">Projekter</a>
+  <a href="/kontakt.html">Kontakt</a>
+</div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+  <body>
+    <div class="content">
+          <h2>Flashcards læring</h1>
+          <h2 id="theme"></h2> <!-- Opretter "overskrift" som en "variabel" -->
+<!--          <img id="question" src="https://github.com/mpsteenstrup/GCP4/blob/master/FN_maal/samlet.jpg?raw=true" style="width: 50%;"> --> <!-- Opretter "myImage" som en "variabel" samt sætter det fulde billede som placeholder -->
+          <p id="question"></p> <!-- Opretter en "question" som "variabel" -->
+          <p id="explanation"></p> <!-- Opretter en "beskrivelse" som "variabel" -->
+          <button type="button" class="ButtonFN" onclick="reveal()">Vis korrekt svar</button> <!-- Kalder JS funktionen "reveal()" -->
+          <button type="button" class="ButtonFN" onclick="next()">Næste</button> <!-- Kalder JS funktionen "next()" -->
+          <button type="button" class="ButtonFN" onclick="learned()">Marker som lært</button> <!-- Kalder JS funktionen "learned()" -->
+          <br>
+          <br>
+          <p id="choose"></p> <!-- Opretter "valg" som en "variabel" -->
+        </div>
+        <div class="footer"> 
+          <div class="cardLeftInvis">
+            <p>
+              <a href="index.html"> Hjem</a>
+              <br>
+              <a href="Projekter.html"> Projekter</a>
+              <br>
+              <a href="SpilLegOgSamarbejde.html"> Spil, Leg og Samarbejde</a>
+              <br>
+              <a href="CyberSikkerhed.html"> Cybersikkerhed</a>
+              <br>
+              <a href="webteknologier.html"> WebTeknologier</a>
+              <br>
+              <a href="Billedmanipulation.html"> Billedmanipulation</a>
+              <br>
+              <a href="MachineLearning.html"> Machine Learning</a>
+              <br>
+              <a href="DataBaser.html"> Databaser</a>
+            </p>
+          </div>
+        
+          <div class="cardRightInvis">
+            <p>
+              <a href="kontakt.html"> Kontakt</a>
+              <br>
+              <a href="Galleri.html"> Gallerier</a>
+              <br>
+              <a href="Galleri-SLOS.html"> Galleri til Spil, Leg og Samarbejde</a>
+              <br>
+              <a href="Galleri-CS.html"> Galleri til Cybersikkerhed</a>
+              <br>
+              <a href="Galleri-WT.html"> Galleri til WebTeknologier</a>
+              <br>
+              <a href="Galleri-BM.html"> Galleri til Billedmanipulation</a>
+              <br> 
+              <a href="Galleri-ML.html"> Galleri til Machine Learning</a>
+              <br> 
+              <a href="Galleri-DB.html"> Galleri til Databaser</a>
+            </p>
+          </div>
+        </div>
+  </body>
+</html>
