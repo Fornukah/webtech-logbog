@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="myStyle.css">
+<title>Josh' Logbog 23/24</title>
+<link rel="icon" type="image/x-icon" href="JoSø.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+<h1>Logbog i Informatik 23/24<br><br>Databaser</h1>
+</div>
+<div class="topnav">
+  <a href="index.html">Hjem</a>
+  <a href="https://rysensteen.dk/" target="_blank">Rysensteen</a>
+  <a href="/HTML/Projekter.html">Projekter</a>
+  <a href="/HTML/kontakt.html">Kontakt</a>
+</div>
+    
+<h2>Indtroduction</h2>
+    <p>I dette sidste forløb skulle vi forbinde alle de områder, sprog og principper vi har arbejdet med
+      i løbet af året i et produkt, hvor man skulle forbinde databaser med javascript, som ville "processere" koden
+      og forbinde dette til et html-lag som ville præsentere koden.
+        <br> 
+        Vi arbejdede så med et princip om "3-lags arkitekturen" hvor der netop er et data-lag, logik-lag og præsentations-lag.
+        <br> 
+        Vores sidste produkt skulle så være et flashcards program hvor dataet var en tabel over begreber eller lignende.
+      <br>
+      <br>
+        <a href="Databaser-main/database.html" target="_blank">Link til Produkt</a>
+      </p>
+    <br>
+<div class="cardLeftVis">
+    <h2>Teoretiske Overvejelser</h2>
+     <p>Som nævnt arbejdede vi med et "3-lags-arkitektur" princip, som kan sammenlignes med f.eks det at arbejde med 
+      data i en samfundsfags opgave, hvori data-laget er det konkrete data man arbejder med, logik-laget er 
+      de beregninger man laver indenfor hver celle, og præsentations-laget er de ændringer man laver
+      til at gøre dataen overskuelig. Erstat dette så med forskellige kodesprog, og man har i grove træk det vi har
+      arbejdet med.
+    <br> 
+    <br>
+    Derudover skal man selvfølgelig have noget data at kople dette med. Derfor er der så også en teoretisk Overvejelse
+    om hvordan man så strukturer et datasæt. Herunder hvilke relationer et tabel må have. Vi arbejde så med begreber
+    som "primær-nøgle", "relationsgraden" og "sekundær-nøgle", som man selvfølgelig kan møde i vores produkt.
+<br>
+<br>
+Som nævnt, er dette også en form for opsamling på alt vi har lavet i løbet af året, så principperne om interaktionsdesign indgik også i produktet.
+ </p>
+    </div>
+<div class="cardRightVis">
+    <h2>Teoretiske Overvejelser I Praksis</h2>
+     <p>Der er mange interrasante kodeeksempeler man kunne fremhæve, men herunder kan man se hvordan vi både finder 
+      et tilfældigt "x" og returnerer de tekst-stykker tilknyttet dem i databasen.
+        </p>
+        <pre>
+          <code>
+function next() {
+FindNew()
+findText(x);
+document.getElementById('theme').innerHTML = overskrift;
+document.getElementById('question').innerHTML = "Forklar "+image;
+document.getElementById('explanation').innerHTML = "Korrekt svar:";
+}
+          </code>
+        </pre>
+        <p>
+          Vi starter en funktion "next()" som først kører en anden funktion "FindNew()", som finder et tilfældigt tal
+          mellem 1 & 26, som er det antal begreber vi har i vores database.
+          <br>
+          Derefter kører den funktionen "findText(x)" som henter tekstykker fra databasen afhængig af vores variabel
+          "x". 
+          <br>
+          Sidst skal vi returnere disse tekstykker, hvor den henter "ElementById" som kan være "theme" og sender 
+          dette tilbage til vores variabel "overskrift" i vores html kode.
+          <br>
+          På den måde har man i denne javascript-kodestykke forbundet logik-laget til data-laget og logik-laget til præsentations-laget.
+     </p>
+    </div>
+<br>
+    <div class="cardLeftVis">
+  <img src="Screenshot 2024-05-12 125354.png" width=100% alt="Picture of CSV file">
+</div>
+<div class="footer"> 
+  <div class="cardLeftInvis">
+    <p>
+      <a href="index.html"> Hjem</a>
+      <br>
+      <a href="HTML/Projekter.html"> Projekter</a>
+      <br>
+      <a href="HTML/SpilLegOgSamarbejde.html"> Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="HTML/CyberSikkerhed.html"> Cybersikkerhed</a>
+      <br>
+      <a href="HTML/webteknologier.html"> WebTeknologier</a>
+      <br>
+      <a href="HTML/Billedmanipulation.html"> Billedmanipulation</a>
+      <br>
+      <a href="HTML/MachineLearning.html"> Machine Learning</a>
+      <br>
+      <a href="HTML/DataBaser.html"> Databaser</a>
+    </p>
+  </div>
+
+  <div class="cardRightInvis">
+    <p>
+      <a href="HTML/kontakt.html"> Kontakt</a>
+      <br>
+      <a href="HTML/Galleri.html"> Gallerier</a>
+      <br>
+      <a href="HTML/Galleri-SLOS.html"> Galleri til Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="HTML/Galleri-CS.html"> Galleri til Cybersikkerhed</a>
+      <br>
+      <a href="HTML/Galleri-WT.html"> Galleri til WebTeknologier</a>
+      <br>
+      <a href="HTML/Galleri-BM.html"> Galleri til Billedmanipulation</a>
+      <br> 
+      <a href="HTML/Galleri-ML.html"> Galleri til Machine Learning</a>
+      <br> 
+      <a href="HTML/Galleri-DB.html"> Galleri til Databaser</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="myStyle.css">
+<title>Josh' Logbog 23/24</title>
+<link rel="icon" type="image/x-icon" href="JoSø.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+<h1>Logbog i Informatik 23/24<br><br>Machine Learning</h1>
+</div>
+<div class="topnav">
+  <a href="index.html">Hjem</a>
+  <a href="https://rysensteen.dk/" target="_blank">Rysensteen</a>
+  <a href="HTML/Projekter.html">Projekter</a>
+  <a href="HTML/kontakt.html">Kontakt</a>
+</div>
+    
+<h2>Indtroduction</h2>
+    <p>Vi skulle her udforske det hurtigt udviklende verden af Machine Learning og kunstigt intilligens. 
+        <br> 
+        Vi udforskede forskellige værktøjer som f.eks. Orange og Teachable Machines.
+         Derudover diskuterede vi udviklingen af teknologien og hvordan fremtiden skulle se ud, 
+         nogle mere pessimistiske end andre.
+        <br> 
+        Derefter skulle vi udnytte offentlige ressourcer til at udvikle vores egne mini, "selvkørende biler".
+      <br>
+      <br>
+      <a href="tm-my-image-model (4)/Index2.html" target="_blank">Link til Spil med udnyttelse af labels</a>
+      <br> 
+      <a href="tm-my-image-model (4)/index.html" target="_blank">Link til Spil med udnyttelse af piltaster</a>
+      <br>
+      <br>
+      Grundet ukendte problemer, har spillet svært ved at indlæse billedet, men layoutet kan ses på billedet herunder:
+    </p>
+    <br>
+
+<div class="cardLeftVis">
+    <h2>Teoretiske Overvejelser</h2>
+     <p>Vi skulle igennem forløbet få et overblik over hvordan AI modeller såsom, ChatGPT, Gemini m.m fungerer,
+      hvordan vi selv kunne udnytte dem, hvilke hindringer de kan have, især ift at indsamle data, 
+      og hvordan det skal bruges i praksis.
+    <br> 
+ </p>
+
+    </div>
+<div class="cardRightVis">
+    <h2>Teoretiske Overvejelser I Praksis</h2>
+     <p>Vi skulle så udnytte webstitet <a href="https://teachablemachine.withgoogle.com/" target="_blank"> teachable machines</a> til at træne en
+      ai model til både at træne en model til at genkende Sten, Saks og Papir, men også at genkende stykker 
+      tegnet papir, til at køre en virtuel bil.
+        <br>
+        Vi trænede en model til at genkende 5 ting: Blank (endte med at være stop), op, højre, venstre og stop(endte med at være ned).
+        Imens fokuserede et andet gruppemedlem på at programere, men grudnet tekniske problemer startede vi andet og sidste modul med intet, som fungerede.
+        Derefter var vi meget nøje med at gemme kopier undervejs, da vi genopbyggede vores spil. Man kan tilgå vores første og andet udkast,
+        hvor det første udnytter piltaster, og det næste reelt udnytter de stykker farvet papir, som vi lavede.
+        
+        Nedenfor kan man se hvordan vi styrede bilen:
+        </p>
+        <pre>
+          <code>
+            function steer(){
+              if (label==="Left"){
+                x=x-1;
+              } else if (label==="Right"){
+                x=x+1;
+              } else if (label==="Stop"){
+                y=y+1;
+              } else if (label==="Go"){
+                y=y-1;
+              } else if (label==="Blank"){
+                y=y; x=x;
+           }
+          }
+          </code>
+        </pre>
+        <p>
+       Tidligere sagde vi at den skulle styres af piltasterne, men det er en relativ simpel ændring til at kunne bruge 
+       Modellen, da vi bare kunne udnytte de returnerede labels som set nednfor:
+        </p>
+        <pre>
+          <code>
+            label = results[0].label;
+          </code>
+        </pre>
+        <p>
+         En hindring var så at modellen havde svært ved at differentiere mellem de forskellige stykker papir.
+         Vi kunne have, som andre grupper har gjort, haft forskellige former og farver, til nemmere at differentiere mellem papirerne.
+         <br>
+         <br>
+         Endnu en hindring mødte vi da vi forsøgte at erstatte en simpel firkant, med et billede af en bil. Under vores 'steer' funktion
+         forsøgte vi ligesom at den læste labels og ændrede på matematikken bag bevægelsen, forsøgte vi at få den til at ændre billedet, til en af de fire bil-billeder vi havde:
+         en op, en ned, en til venstre og en til højre. Dog grundet problemer, med hvad vi antager er grundet teachable machines modelopbygning, som 
+        f.eks at kameraet forsvandt, hele billedet forsvant, fik vi det ikke inkorporeret.
+     </p>
+    </div>
+<br>
+</div>
+<div class="cardLeftInvis">
+  <img src="Screenshot 2024-04-10 120801.png" width=20%>
+</div>
+<div class="footer"> 
+  <div class="cardLeftInvis">
+    <p>
+      <a href="index.html"> Hjem</a>
+      <br>
+      <a href="HTML/Projekter.html"> Projekter</a>
+      <br>
+      <a href="HTML/SpilLegOgSamarbejde.html"> Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="HTML/CyberSikkerhed.html"> Cybersikkerhed</a>
+      <br>
+      <a href="HTML/webteknologier.html"> WebTeknologier</a>
+      <br>
+      <a href="HTML/Billedmanipulation.html"> Billedmanipulation</a>
+      <br>
+      <a href="HTML/MachineLearning.html"> Machine Learning</a>
+      <br>
+      <a href="HTML/DataBaser.html"> Databaser</a>
+    </p>
+  </div>
+
+  <div class="cardRightInvis">
+    <p>
+      <a href="HTML/kontakt.html"> Kontakt</a>
+      <br>
+      <a href="HTML/Galleri.html"> Gallerier</a>
+      <br>
+      <a href="HTML/Galleri-SLOS.html"> Galleri til Spil, Leg og Samarbejde</a>
+      <br>
+      <a href="HTML/Galleri-CS.html"> Galleri til Cybersikkerhed</a>
+      <br>
+      <a href="HTML/Galleri-WT.html"> Galleri til WebTeknologier</a>
+      <br>
+      <a href="HTML/Galleri-BM.html"> Galleri til Billedmanipulation</a>
+      <br> 
+      <a href="HTML/Galleri-ML.html"> Galleri til Machine Learning</a>
+      <br> 
+      <a href="HTML/Galleri-DB.html"> Galleri til Databaser</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>
