@@ -63,7 +63,7 @@ font-size: 17px;
 font-family: 'Josefin Sans', sans-serif;
 text-align: left;
 text-decoration: none; /* fjerner understregen på link*/
-color: rgb(30, 30, 70);
+color: rgb(30, 30, 130);
 padding: 5px;
 }
 
@@ -73,7 +73,7 @@ font-family: 'Josefin Sans', sans-serif;
 font-weight: 600;
 text-align: left;
 text-decoration: none; /* fjerner understregen på link*/
-color: rgb(100, 100, 130);
+color: rgb(100, 100, 200);
 }
 
 .boxFloatMiddle{
